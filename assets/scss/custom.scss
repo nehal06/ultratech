@@ -1,0 +1,103 @@
+
+
+// All of your custom SCSS variables go first
+$primary:       #aa4c90;
+$primary-light:#eee0ea;
+$nav-light:#ffffff;
+$light-back:#F2F4F6;
+$secondary:     #ffffff ;
+$light:         #e7f2f8;
+$dark:          #000000;
+$dark-grey:#4b4c4c;
+// fonts
+$font-family-base: 'Montserrat', sans-serif;
+
+//nav
+$navbar-dark-color:                 rgba($dark,0.7) !default;
+$navbar-dark-hover-color:           rgba($primary, .75) !default;
+$navbar-dark-active-color:          $primary !default;
+$nav-box-shadow: 0px 0px 1px 1px rgba($dark,0.07);
+$footer-box-shadow:0px 0px 1px 1px rgba($dark,0.07);
+html ,body{
+  position: relative;
+}
+.navbar{
+  height: 100px;
+}
+.navbar-collapse {
+  z-index: 1000;
+  background: $nav-light;
+  padding: 0.9rem;
+
+}
+
+.footer{
+  position: absolute !important;
+  // bottom: 0;
+  width: 100%;
+  min-height:50px;
+  background: $nav-light;
+  color: $navbar-dark-color;
+  box-shadow: $footer-box-shadow;
+  -moz-box-shadow: $footer-box-shadow;
+  -webkit-box-shadow: $footer-box-shadow;
+ 
+}
+.footer-primary{
+  background: $nav-light;
+  padding: 2rem;
+}
+.footer-second{
+  background: $primary-light;
+  padding: 0.5rem 2rem;
+}
+.footer-link{
+  color: $navbar-dark-color;  
+}
+.footer-link:hover{
+  color: $navbar-dark-hover-color;
+}
+.second-back{
+  background:$light-back;
+}
+.circle{
+  background: $primary-light;
+  color: $dark-grey;
+}
+ /*for small mobiles galaxy*/
+@media (min-width: 320px) {
+  .footer-primary{
+    padding: 1.2rem 0rem;
+  }
+  .footer-second{
+    padding: 0.5rem 1rem;
+  }
+  
+}
+ /*for small mobiles galaxy*/
+ @media (min-width: 768px) {
+  .footer-primary{
+    padding: 1.5rem 1rem;
+  }
+  .footer-second{
+    padding: 0.5rem 1rem;
+  }
+}
+
+ /*for small mobiles galaxy*/
+ @media (min-width: 992px) {
+  .footer-primary{
+    padding: 2rem;
+  }
+  .footer-second{
+    padding: 0.5rem 2rem;
+  }
+}
+//then bootstrap & bootstrap-vue should be added after 
+//so that they inherit the custom SCSS variables
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'bootstrap-vue/src/index.scss';
+
+
+
+//all other custom scss files or css should be added here
