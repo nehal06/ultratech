@@ -16,10 +16,11 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss">
 .banner {
   position: relative;
   /* z-index: 90; */
+  width: 100%;
 }
 #background {
   width: 60%;

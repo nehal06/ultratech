@@ -1,5 +1,5 @@
 <template>
-  <b-container class="second-back brand-wrapper bv-example-row" fluid>
+  <b-container class="second-back brand-wrapper bv-example-row">
     <div class="d-flex brand-header align-items-center justify-content-center">
       <h1 class="text-center">Brands</h1>
     </div>
@@ -16,7 +16,7 @@
         <BrandCard v-bind:card="card" />
       </div> -->
       <div
-      class="align-self-center"
+        class="align-self-center"
         v-for="(card, index) in cards1"
         v-bind:class="index % 2 != 0 ? 'odd-div' : ''"
         v-bind:key="index"
@@ -32,7 +32,7 @@ import BrandCard from "./BrandCard";
 import BrandCardSelf from "./BrandCardSelf";
 
 export default {
-  components: { BrandCard,BrandCardSelf },
+  components: { BrandCard, BrandCardSelf },
   data: function () {
     return {
       cards: [
@@ -65,7 +65,7 @@ export default {
           text: "Discover >",
         },
       ],
-       cards1: [
+      cards1: [
         {
           src: "/brands/Ultralix-brand.png",
           title: "Ultratan",
@@ -100,53 +100,58 @@ export default {
 };
 </script>
 
-<style>
-.brand-section {
-  margin: auto;
-  width: 80%;
+<style lang="scss">
+.brand-wrapper {
+  .brand-header {
+    padding-top: 3%;
+  }
+  .brand-section {
+    margin: auto;
+    width: 100%;
+  }
 }
+
 /* .odd-div{
   margin-top: 15%;
 } */
-.brand-header {
-  padding-top: 3%;
-}
+
 @media (min-width: 320px) {
-  .brand-section {
-    position: relative;
-      padding: 1rem 0 2rem 0;
-  }
-  .brand-header {
-  padding-top: 1rem;
-}
   .brand-wrapper {
     margin-top: 40%;
+    .brand-header {
+      padding-top: 1rem;
+    }
+    .brand-section {
+      position: relative;
+      padding: 1rem 0 2rem 0;
+    }
   }
 }
 
 @media (min-width: 768px) {
-  .brand-section {
-    position: relative;
-    padding: 1rem 0 2rem 0;
-  }
-  .brand-header {
-  padding-top: 3%;
-}
   .brand-wrapper {
     margin-top: 0;
+    .brand-section {
+      position: relative;
+      padding: 1rem 0 2rem 0;
+    }
+    .brand-header {
+      padding-top: 3%;
+    }
   }
 }
 
 @media (min-width: 992px) {
-  .brand-section {
-    position: relative;
-    padding: 2rem 2rem 6rem 2rem;
-  }
-  .brand-header {
-  padding-top: 3%;
-}
   .brand-wrapper {
     margin-top: 0;
+    max-width:100%;
+    .brand-section {
+      position: relative;
+      padding: 2rem 2rem 6rem 2rem;
+    }
+    .brand-header {
+      padding-top: 3%;
+    }
   }
 }
 </style>

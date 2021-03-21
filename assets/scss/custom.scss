@@ -21,6 +21,9 @@ $footer-box-shadow:0px 0px 1px 1px rgba($dark,0.07);
 html ,body{
   position: relative;
 }
+.primary-lightback{
+  background: $primary-light;
+}
 .navbar{
   height: 100px;
 }
